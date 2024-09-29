@@ -9,6 +9,10 @@ interface HeaderProps{
 }
 export const Header:FC<HeaderProps>=({title}:HeaderProps)=>{
 
+    const logout=()=>{
+        localStorage.removeItem("token")
+        window.location.href="/login"
+    }
     return(
         <AppBar position="sticky" > 
         
@@ -18,7 +22,7 @@ export const Header:FC<HeaderProps>=({title}:HeaderProps)=>{
           <Typography variant="h6" component="div" >
             {title}
           </Typography>
-          <Button color="inherit">Login</Button>
+          <Button color="inherit" onClick={()=>logout()}>Logout</Button>
           </div>
         </Toolbar>
         </AppBar>

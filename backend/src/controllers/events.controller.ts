@@ -124,7 +124,7 @@ export const deleteEvent = async (req: AuthenticatedRequest, res: Response) => {
         }else if(eventToDelete?.postedBy.toString()!==id){
             res.status(403).json({message:"You are not authorised to delete"})
         }else {
-            await Event.deleteOne({id:eventId})
+         await Event.deleteOne({id:eventId})
          res.status(204).send();
         }
     }else{

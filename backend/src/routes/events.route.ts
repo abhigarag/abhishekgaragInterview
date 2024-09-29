@@ -26,6 +26,6 @@ router.post('/',protect, createEvent);
 router.put('/vote/:eventId',protect,toggleVote);
 
 // Route to delete an event by ID
-router.delete('/:eventId', deleteEvent);
+router.delete('/:eventId',protect, deleteEvent);
 
 export default router;
