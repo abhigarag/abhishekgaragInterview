@@ -168,7 +168,7 @@ This API uses **Bearer Token** authentication. Include the token in the `Authori
     "addVote": false}
     ```
 
-### 4. Update an Existing Event
+### 3. Vote an Event
 
 - **Endpoint:** `PUT /api/events/vote/:id`
 - **Description:** Updates an existing event by its unique ID.
@@ -201,7 +201,7 @@ This API uses **Bearer Token** authentication. Include the token in the `Authori
     }
     ```
 
-### 5. Delete an Event
+### 4. Delete an Event
 
 - **Endpoint:** `DELETE /api/events/:id`
 - **Description:** Deletes an event by its unique ID.
