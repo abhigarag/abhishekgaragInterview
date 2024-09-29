@@ -87,3 +87,142 @@ Frontend: To build the React app for production, run:
 cd frontend
 npm run build
 This will create an optimized production build in the build directory.
+
+
+## Authentication
+This API uses **Bearer Token** authentication. Include the token in the `Authorization` header of each request.
+
+## Endpoints
+
+### 1. Get All Events
+
+- **Endpoint:** `GET /api/events`
+- **Description:** Retrieves a list of all events.
+- **Response:**
+    - **Status Code:** `200 OK`
+    - **Body:**
+    ```json
+    [
+    {
+        "name": "test1",
+        "description": "test desc",
+        "dates": [
+            {
+                "date": "Mon Sep 30 2024 00:00:00 GMT+0530 (India Standard Time)",
+                "votes": [
+                    "test2"
+                ],
+                "voted": false
+            }
+        ],
+        "totalVotes": 1,
+        "addVote": false,
+        "id": "66f99119f33a6963a9a867f7"
+    },
+    {
+        "name": "test2",
+        "description": "test2 desc",
+        "dates": [
+            {
+                "date": "Mon Sep 30 2024 00:00:00 GMT+0530 (India Standard Time)",
+                "votes": [
+                    "test2"
+                ],
+                "voted": false
+            }
+        ],
+        "totalVotes": 1,
+        "addVote": false,
+        "id": "66f9912cf33a6963a9a867fa"
+    }]
+    ```
+
+
+
+### 2. Create a New Event
+
+- **Endpoint:** `POST /api/v1/events`
+- **Description:** Creates a new event.
+- **Request Body:**
+    - **Payload:**
+    ```json
+    {
+    "name": "test3",
+    "description": "test3",
+    "dates": "2024/09/30"
+}
+    ```
+- **Response:**
+    - **Status Code:** `201 Created`
+    - **Body:**
+    ```json
+    {
+    "name": "test3",
+    "dates": [
+        {
+            "date": "2024/09/30",
+            "votes": []
+        }
+    ],
+    "id": "66f991b1f33a6963a9a86823",
+    "addVote": false}
+    ```
+
+### 4. Update an Existing Event
+
+- **Endpoint:** `PUT /api/v1/events/:id`
+- **Description:** Updates an existing event by its unique ID.
+- **Parameters:**
+    - `id`: The unique identifier of the event.
+- **Request Body:**
+    - **Payload:**
+    ```json
+    {
+    "votes": [
+        {
+            "date": "Mon Sep 30 2024 00:00:00 GMT+0530 (India Standard Time)"
+        }
+    ]}
+    ```
+- **Response:**
+    - **Status Code:** `200 OK`
+    - **Body:**
+    ```json
+    {
+    "message": "Votes updated successfully"
+    }
+    ```
+- **Error Response:**
+    - **Status Code:** `404 Not Found`
+    - **Body:**
+    ```json
+    {
+        "error": "Event not found"
+    }
+    ```
+
+### 5. Delete an Event
+
+- **Endpoint:** `DELETE /api/v1/events/:id`
+- **Description:** Deletes an event by its unique ID.
+- **Parameters:**
+    - `id`: The unique identifier of the event.
+- **Response:**
+    - **Status Code:** `204 No Content`
+    - **Body:** (No content)
+
+- **Error Response:**
+    - **Status Code:** `404 Not Found`
+    - **Body:**
+    ```json
+    {
+        "error": "Event not found"
+    }
+    ```
+
+## Error Handling
+All error responses should include an appropriate HTTP status code and an error message in the response body, formatted as shown in the error responses above.
+
+## Conclusion
+This API provides basic CRUD operations for managing events. Ensure that each request is authenticated and validated on the server side for security and data integrity.
+
