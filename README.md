@@ -37,7 +37,7 @@ Running the Applications
 Start the Backend
 To run the Node.js backend with TypeScript, use the following command:
 
-add .env file in backend/ *shared in mail*
+paste the content in backend/.env *shared in mail*
 
 cd backend
 npx ts-node src/index.ts
