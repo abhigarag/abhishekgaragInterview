@@ -1,13 +1,8 @@
 Description
 This project is a full-stack application with a Node.js backend and a React frontend. The backend is written in TypeScript, and the frontend is developed using React. The repository is organized into two folders:
 
-Folder Structure
-repo/
-│
-├── frontend/      # React frontend code
-├── backend/       # Node.js backend code with TypeScript
-├── package.json   # Root package.json (optional if needed for common tooling)
-└── README.md      # Project documentation
+
+
 
 Prerequisites
 Node.js: Make sure you have Node.js installed (preferably v14+).
