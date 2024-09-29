@@ -141,7 +141,7 @@ This API uses **Bearer Token** authentication. Include the token in the `Authori
 
 ### 2. Create a New Event
 
-- **Endpoint:** `POST /api/v1/events`
+- **Endpoint:** `POST /api/events`
 - **Description:** Creates a new event.
 - **Request Body:**
     - **Payload:**
@@ -170,7 +170,7 @@ This API uses **Bearer Token** authentication. Include the token in the `Authori
 
 ### 4. Update an Existing Event
 
-- **Endpoint:** `PUT /api/v1/events/:id`
+- **Endpoint:** `PUT /api/events/:id`
 - **Description:** Updates an existing event by its unique ID.
 - **Parameters:**
     - `id`: The unique identifier of the event.
@@ -203,7 +203,7 @@ This API uses **Bearer Token** authentication. Include the token in the `Authori
 
 ### 5. Delete an Event
 
-- **Endpoint:** `DELETE /api/v1/events/:id`
+- **Endpoint:** `DELETE /api/events/:id`
 - **Description:** Deletes an event by its unique ID.
 - **Parameters:**
     - `id`: The unique identifier of the event.
