@@ -170,7 +170,7 @@ This API uses **Bearer Token** authentication. Include the token in the `Authori
 
 ### 4. Update an Existing Event
 
-- **Endpoint:** `PUT /api/events/:id`
+- **Endpoint:** `PUT /api/events/vote/:id`
 - **Description:** Updates an existing event by its unique ID.
 - **Parameters:**
     - `id`: The unique identifier of the event.
