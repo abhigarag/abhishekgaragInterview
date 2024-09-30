@@ -108,7 +108,7 @@ This API uses **Bearer Token** authentication. Include the token in the `Authori
         "description": "test desc",
         "dates": [
             {
-                "date": "Mon Sep 30 2024 00:00:00 GMT+0530 (India Standard Time)",
+                "date": "2024/09/30",
                 "votes": [
                     "test2"
                 ],
@@ -124,7 +124,7 @@ This API uses **Bearer Token** authentication. Include the token in the `Authori
         "description": "test2 desc",
         "dates": [
             {
-                "date": "Mon Sep 30 2024 00:00:00 GMT+0530 (India Standard Time)",
+                "date": "2024/09/30",
                 "votes": [
                     "test2"
                 ],
@@ -180,7 +180,7 @@ This API uses **Bearer Token** authentication. Include the token in the `Authori
     {
     "votes": [
         {
-            "date": "Mon Sep 30 2024 00:00:00 GMT+0530 (India Standard Time)"
+            "date": "2024/09/30"
         }
     ]}
     ```
